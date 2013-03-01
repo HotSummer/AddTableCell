@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "AddTableCellViewController.h"
+#import <PassKit/PassKit.h>
+#import <Foundation/Foundation.h>
+#import <Security/Security.h>
 
 @implementation AppDelegate
 
@@ -23,8 +27,29 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    AddTableCellViewController *addTableViewController = [[AddTableCellViewController alloc] initWithNibName:@"AddTableCellViewController" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:addTableViewController];
+    self.window.rootViewController = nav;
+    [nav release];
+    [addTableViewController release];
+//    [self initPass];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)initPass{
+    BOOL b = [PKPassLibrary isPassLibraryAvailable];
+    if (b) {
+        NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"FilightCard" ofType:@"pkpass"];
+        
+        NSData *data = [[NSData alloc] initWithContentsOfFile:jsonPath];
+        PKPass *pass = [[PKPass alloc] initWithData:data error:nil];//[[PKPass alloc] init];//
+        PKAddPassesViewController *passVC = [[PKAddPassesViewController alloc] initWithPass:pass];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:passVC];
+        self.window.rootViewController = nav;
+        [passVC release];
+        [nav release];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

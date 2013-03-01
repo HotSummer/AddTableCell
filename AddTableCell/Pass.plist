@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>barcode</key>
+	<dict>
+		<key>messageEncoding</key>
+		<string>iso-8859-1</string>
+		<key>message</key>
+		<string>Flight-GateF12-ID6643679AH7B</string>
+		<key>format</key>
+		<string>PKBarcodeFormatQR</string>
+	</dict>
+	<key>boardingPass</key>
+	<dict>
+		<key>transitType</key>
+		<string>PKTransitTypeAir</string>
+		<key>backFields</key>
+		<array>
+			<dict>
+				<key>value</key>
+				<string>John Appleseed</string>
+				<key>label</key>
+				<string>Passenger</string>
+				<key>key</key>
+				<string>passenger-name</string>
+			</dict>
+		</array>
+		<key>secondaryFields</key>
+		<array>
+			<dict>
+				<key>value</key>
+				<string>07/11/2012 10:22</string>
+				<key>label</key>
+				<string>Departure date</string>
+				<key>key</key>
+				<string>date</string>
+			</dict>
+			<dict>
+				<key>value</key>
+				<string>F12</string>
+				<key>label</key>
+				<string>Gate</string>
+				<key>key</key>
+				<string>gate</string>
+			</dict>
+		</array>
+		<key>primaryFields</key>
+		<array>
+			<dict>
+				<key>value</key>
+				<string>LHR</string>
+				<key>label</key>
+				<string>London</string>
+				<key>key</key>
+				<string>destination</string>
+			</dict>
+			<dict>
+				<key>value</key>
+				<string>SFO</string>
+				<key>label</key>
+				<string>San Francisco</string>
+				<key>key</key>
+				<string>origin</string>
+			</dict>
+		</array>
+	</dict>
+	<key>description</key>
+	<string>Demo pass</string>
+	<key>logoText</key>
+	<string>Flight info</string>
+	<key>backgroundColor</key>
+	<string>rgb(107,156,196)</string>
+	<key>teamIdentifier</key>
+	<string>AGKMBZTN3K</string>
+	<key>serialNumber</key>
+	<string>1234564</string>
+	<key>organizationName</key>
+	<string>Bernardinuscollege</string>
+	<key>formatVersion</key>
+	<integer>1</integer>
+	<key>passTypeIdentifier</key>
+	<string>pass.nl.mijnbc.test</string>
+</dict>
+</plist>
